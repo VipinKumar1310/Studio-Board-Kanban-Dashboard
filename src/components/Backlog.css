@@ -1,0 +1,46 @@
+.card-wrapper{
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px 0px #d2d7e0;
+    width: 280px;
+    height: 100%;
+    border-top: double 4px transparent;
+    border-radius: 5px;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.backlog-color{
+    background-image: 
+    linear-gradient(#f6f8fc, #f6f8fc), 
+    radial-gradient(circle at top left,
+    #c781ff, #e57373);
+}
+.card-wrapper__header{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 10px;
+}
+.backlog-name{
+    color: #707090;
+    font-size: 20px;
+    font-weight: 400;
+}
+div{
+    display: block;
+}
+.backlog-dots{
+    color: #707090;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
