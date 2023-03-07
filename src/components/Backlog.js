@@ -1,5 +1,5 @@
 import React from 'react'
-import './Block.css'
+import './style/Block.css'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import Card from './Card'
 
@@ -10,8 +10,10 @@ const Backlog = () => {
             <div className='backlog-name'>Backlog</div>
             <div className='backlog-dots'><i className='material-icons'><KeyboardArrowDownIcon/></i></div>
         </div>
-        <div className='cards'><Card/></div>
-        
+        <div className='cards'>
+          <Card/>
+          
+        </div>
     </div>
   )
 }

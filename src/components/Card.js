@@ -1,6 +1,9 @@
 import React from 'react'
-import './Card.css'
+import './style/Card.css'
 import user from '../resources/avatar1.jpg'
+import MessageIcon from '@mui/icons-material/Message';
+import AttachFileIcon from '@mui/icons-material/AttachFile';
+import AddIcon from '@mui/icons-material/Add';
 
 const Card = () => {
   return (
@@ -18,13 +21,13 @@ const Card = () => {
         <div className='card__menu-left'>
             <div className='comments-wrapper'>
                 <div className='comments-ico'>
-                    <i className='material-ico'>comment</i>
+                    <i className='material-ico'><MessageIcon/></i>
                 </div>
                 <div className='comments-num'>1</div>
             </div>
             <div className='attach-wrapper'>
                 <div className='attach-ico'>
-                    <i className='material-icons'>attach_file</i>
+                    <i className='material-icons'><AttachFileIcon/></i>
                 </div>
                 <div className='attach-num'>2</div>
 
@@ -32,7 +35,7 @@ const Card = () => {
         </div>
         <div className='card__menu-right'>
             <div className='add-peoples'>
-                <i className='material-icons'>add</i>
+                <i className='material-icons'><AddIcon/></i>
             </div>
             <div className='img-avatar'>
             <img src={user} alt="avatar-1" />

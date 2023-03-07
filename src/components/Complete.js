@@ -1,5 +1,5 @@
 import React from 'react'
-import './Block.css'
+import './style/Block.css'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import Card from './Card'
 

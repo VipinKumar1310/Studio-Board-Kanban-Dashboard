@@ -1,5 +1,5 @@
 import React from 'react'
-import './StudioBoard.css'
+import './style/StudioBoard.css'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 

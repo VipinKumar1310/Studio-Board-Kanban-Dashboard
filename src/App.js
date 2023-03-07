@@ -5,7 +5,6 @@ import InProgress from './components/InProgress'
 import Review  from './components/Review'
 import Complete from './components/Complete'
 import './App.css'
-import AddButton from './components/AddButton'
 
 const App = () => {
   return (
@@ -18,7 +17,6 @@ const App = () => {
       <Review/>
       <Complete/>
       </div>
-      <AddButton/>
     </div>
   )
 }
