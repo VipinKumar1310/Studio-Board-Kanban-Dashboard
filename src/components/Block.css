@@ -17,6 +17,18 @@
     radial-gradient(circle at top left,
     #c781ff, #e57373);
 }
+.review-color{
+    background-image: linear-gradient(#f6f8fc, #f6f8fc),
+    radial-gradient(circle at top left, #9ea7fc, #6eb4f7);
+}
+.in-progress-color{
+    background-image: linear-gradient(#f6f8fc, #f6f8fc), 
+    radial-gradient(circle at top left, #ff9985, #ffb74e);
+}
+.complete-color {
+    background-image: linear-gradient(#f6f8fc, #f6f8fc), 
+    radial-gradient(circle at top left, #81d5ee, #7ed492);
+}
 .card-wrapper__header{
     display: flex;
     justify-content: space-between;

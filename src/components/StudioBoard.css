@@ -8,9 +8,7 @@
     color: #707090;
     padding: 0;
     margin: 0;
-}
-div{
-    display: block;
+    margin-right: 20px;
 }
 .arrow-icon{
     margin-left: 15px;
@@ -22,6 +20,25 @@ div{
     position: relative;
     cursor: pointer;
     transition: 0.4s;
-    padding: 0;
-    margin: 0;
+}
+.material-icons {
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+}
+.arrow-icon i {
+    position: absolute;
+    color: #d8d8e4;
+    font-size: 32px;
+    left: -1.5px;
+    top: -1px;
+ 
 }
