@@ -38,7 +38,24 @@
     margin: 10px 10px 0 0;
     cursor: pointer;
     font-size: 18px;
-    display: none;
+    display:none;
+}
+.card__header-clear > .material-icons{
+        font-family: "Material Icons";
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-smoothing: antialiased;
+        color: #d8d8e4;
+        font-size: 32px;
+        left: -1.5px;
+        top: -1px;
+        padding-left: 2.5px;
 }
 .material-icons{
     font-family: "Material Icons";
@@ -51,8 +68,6 @@
     white-space: nowrap;
     word-wrap: normal;
     direction: ltr;
-    -webkit-font-feature-settings: "liga";
-    -webkit-font-smoothing: antialiased;
 }
 .card__text{
     color: #707090;
@@ -98,10 +113,11 @@
     cursor: pointer;
 }
 .img-avatar {
-    width: 28px;
-    height: 28px;
     margin: 0 10px 0 5px;
 }
 .img-avatar img{
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
+    margin-top: 7px;
 }

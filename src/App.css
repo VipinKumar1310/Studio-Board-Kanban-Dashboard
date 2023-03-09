@@ -5,10 +5,54 @@
 .app{
   grid-area: main;
   position: relative;
-  background-color: #eef2f9;
+  background-color: var(--colorNav);
   padding-left: 75px;
 }
 .nav{
   margin:  25px;
   padding-top: 20px;
+}
+
+.nav-board{
+  display: flex;
+}
+.nav-name{
+  font-size: 28px;
+  font-weight: 400;
+  color: #707090;
+  padding: 0;
+  margin: 0;
+  margin-right: 20px;
+  
+}
+.arrow-icon{
+  margin-left: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 10px 0px #d2d7e0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease;
+}
+.arrow-icon:hover {
+  box-shadow: 0px 0px 10px 0px #38404d;
+}
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  color: #d8d8e4;
+  font-size: 32px;
+  left: -1.5px;
+  top: -1px;
+  padding-left: 2.5px;
 }

@@ -4,6 +4,7 @@ import user from '../resources/avatar1.jpg'
 import MessageIcon from '@mui/icons-material/Message';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 import AddIcon from '@mui/icons-material/Add';
+import ClearIcon from '@mui/icons-material/Clear';
 
 const Card = () => {
   return (
@@ -12,7 +13,7 @@ const Card = () => {
          <div className='card-container-color card-color-low'>
             <div className='card__header-priority'>Low Priority</div>
             <div className='card__header-clear'>
-                <i className='material-icons'>clear</i>
+                <i className='material-icons'><ClearIcon/></i>
             </div>
          </div>
         </div>

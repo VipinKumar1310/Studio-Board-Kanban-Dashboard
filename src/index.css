@@ -3,12 +3,6 @@ body {
   background: linear-gradient(90deg, #bad6f9 0%, #bccdf2 100%);
   font-family: "Roboto", sans-serif;
   user-select: none;
-}
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-:root {
   --logoHeader: 60px;
   --sidebarNav: 120px;
   --colorLogo: #888fdc;
@@ -19,6 +13,11 @@ code {
   --colorIcon: #a1ffff;
   --colorName: #707090;
 }
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
 * {
   padding: 0;
   margin: 0;
