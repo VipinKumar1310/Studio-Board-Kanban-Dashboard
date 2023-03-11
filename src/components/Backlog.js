@@ -3,7 +3,7 @@ import './style/Block.css'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import Card from './Card'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
-
+import { AddCircleOutline } from '@mui/icons-material'
 
 const Backlog = () => {
 
@@ -27,6 +27,13 @@ const Backlog = () => {
           
          <div className='cards' >
           <Card/>
+          <div className='card-wrapper__footer'>     
+            <div className='add-task'>Add Task</div>
+            <div className='add-task-ico'>
+                <i className='material-icons'><AddCircleOutline/></i>
+            </div>
+        
+    </div>
           </div>
           
         )}

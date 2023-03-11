@@ -1,6 +1,20 @@
-.app-main{
-  display: flex; 
-  padding-left: 25px; 
+.kanban-main{
+  background-color: #eef2f9;
+    grid-area: main;
+    position: relative;
+}
+.kanban__main-wrapper {
+  background-color: #eef2f9;
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  /* margin: 0 50px 0 50px; */
+}
+@media screen and (max-width: 820px){
+.kanban__main-wrapper {
+    justify-content: space-around;
+    margin: 0px;
+}
 }
 .app{
   grid-area: main;
@@ -8,15 +22,18 @@
   background-color: var(--colorNav);
   padding-left: 75px;
 }
-.nav{
-  margin:  25px;
-  padding-top: 20px;
+.kanban__nav {
+  background-color: #eef2f9;
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
 }
-
-.nav-board{
+.kanban__nav-name{
   display: flex;
 }
-.nav-name{
+.kanban-name{
   font-size: 28px;
   font-weight: 400;
   color: #707090;
@@ -25,7 +42,7 @@
   margin-right: 20px;
   
 }
-.arrow-icon{
+.kanban-arrow{
   margin-left: 15px;
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0px 0px 10px 0px #d2d7e0;
@@ -36,7 +53,7 @@
   cursor: pointer;
   transition: box-shadow 0.5s ease;
 }
-.arrow-icon:hover {
+.kanban-arrow:hover {
   box-shadow: 0px 0px 10px 0px #38404d;
 }
 .material-icons {
@@ -55,4 +72,37 @@
   left: -1.5px;
   top: -1px;
   padding-left: 2.5px;
+}
+
+@media screen and (max-width: 720px) {
+  .kanban__nav-avs {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .kanban__nav-name {
+    margin: 0 auto;
+  }
+
+  .kanban__nav-wrapper {
+    margin: 0;
+  }
+
+  .avatar-user {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .kanban__main-wrapper {
+    justify-content: space-around;
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  .kanban__main-add-btn {
+    display: none;
+  }
 }

@@ -25,25 +25,27 @@ const App = () => {
 
   return (
     <div className='app'>
-      <div className='nav'>
-      <div className='nav-board' >
-       <div className='nav-name'>StudioBoard</div>
-       <div className='arrow-icon' onClick={handleArrowClick}>
+      <div className='kanban__nav'>
+       <div className='kanban__nav-wrapper'>
+        <div className='kanban__nav-name' >
+          <div className='kanban-name'>StudioBoard</div>
+           <div className='kanban-arrow' onClick={handleArrowClick}>
         <i className='material-icons'>{icon === 'down' ? <KeyboardArrowDownIcon/> : <KeyboardArrowRightIcon/>}</i>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div className='kanban__main'>
         {isActive && (
-          <div className='app-main' onClick={handleMainClick}>
-            <Backlog/>
-            <InProgress/>
-            <Review/>
-           <Complete/>
+          <div className='kanban__main-wrapper' onClick={handleMainClick}>
+             <Backlog/>
+             <InProgress/>
+             <Review/>
+             <Complete/>
           </div>
         )}
-      </div>
-      </div>
-     </div>
+          </div>
       
-      <div className='app-main'>
-      </div>
     </div>
   )
 }
