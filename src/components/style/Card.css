@@ -29,48 +29,19 @@
     background: linear-gradient(90deg, #9ea7fc 17%, #6eb4f7 83%);
 }
 .card__header-priority{
-    color: white;
+    color: var(--colorWhite);
     font-size: 12px;
     font-weight: 400;
 }
 .card__header-clear{
-    color: #b7bec7;
+    color: var(--colorBarW);
     margin: 10px 10px 0 0;
     cursor: pointer;
     font-size: 18px;
     display:none;
 }
-.card__header-clear > .material-icons{
-        font-family: "Material Icons";
-        font-weight: normal;
-        font-style: normal;
-        line-height: 1;
-        letter-spacing: normal;
-        text-transform: none;
-        white-space: nowrap;
-        word-wrap: normal;
-        direction: ltr;
-        -webkit-font-smoothing: antialiased;
-        color: #d8d8e4;
-        font-size: 32px;
-        left: -1.5px;
-        top: -1px;
-        padding-left: 2.5px;
-}
-.material-icons{
-    font-family: "Material Icons";
-    font-weight: normal;
-    font-style: normal;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-}
 .card__text{
-    color: #707090;
+    color: var(--colorName);
     font-size: 16px;
     font-weight: 400;
     margin: 0 10px;
@@ -89,8 +60,11 @@
 .comments-wrapper, .attach-wrapper {
     display: flex;
 }
+.comments-ico, .attach-ico{
+    font-size: 13px;
+}
 .comments-ico, .comments-num, .attach-ico, .attach-num {
-    color: #b7bec7;
+    color: var(--colorBarW);
     display: flex;
     align-items: center;
 }
@@ -103,21 +77,28 @@
     align-items: center;
 }
 .add-peoples {
-    color: #b7bec7;
+    color: var(--colorBarW);
     width: 28px;
     height: 28px;
-    border: 1px dashed #b7bec7;
+    border: 1px dashed var(--colorBarW);
     border-radius: 50px;
     position: relative;
     font-size: 20px;
     cursor: pointer;
 }
+.add-peoples i {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
 .img-avatar {
+    width: 30px;
+    margin: 30px;
     margin: 0 10px 0 5px;
+    padding-top: 3px;
 }
 .img-avatar img{
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    margin-top: 7px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
 }
