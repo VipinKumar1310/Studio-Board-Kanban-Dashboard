@@ -4,6 +4,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import Card from './Card'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
 import { AddCircleOutline } from '@mui/icons-material'
+import AdButton from './AdButton'
 
 const Backlog = () => {
 
@@ -15,6 +16,25 @@ const Backlog = () => {
     setIcon(icon === 'down' ? 'right' : 'down')
   };
 
+  const [taskList, setTaskList] = useState([
+    {
+      cardText: "anything",
+      priority: "Low Priority"
+    },
+    {
+      cardText: "anything",
+      priority: "Low Priority"
+    },
+    {
+      cardText: "anything",
+      priority: "Low Priority"
+    },
+    {
+      cardText: "anything",
+      priority: "Low Priority"
+    },
+  ])
+
   return (
     <div className='card-wrapper backlog-color'>
         <div className='card-wrapper__header'>
@@ -25,14 +45,12 @@ const Backlog = () => {
         </div>
         {showDropdown && (       
          <div className='cards' >
-          <Card/>
-          <Card/>
-          <Card/>
+         {taskList.map((task, index) => {
+          return <Card key={index} text={task.cardText} priortiy={task.priority} />
+         })}
+         
           <div className='card-wrapper__footer'>     
-            <div className='add-task'>Add Task</div>
-            <div className='add-task-ico'>
-                <i className='material-icons'><AddCircleOutline/></i>
-            </div>     
+            <AdButton setTaskList={setTaskList} taskList={taskList} />   
           </div>
           </div>        
         )}   
