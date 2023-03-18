@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import './style/Block.css'
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import Card from './Card'
+import AddForm from './AddForm'
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
-import { AddCircleOutline } from '@mui/icons-material'
-import AdButton from './AdButton'
+
 
 const Backlog = () => {
 
@@ -25,15 +25,15 @@ const Backlog = () => {
       cardText: "anything",
       priority: "Low Priority"
     },
-    {
-      cardText: "anything",
-      priority: "Low Priority"
-    },
-    {
-      cardText: "anything",
-      priority: "Low Priority"
-    },
   ])
+
+  const handleDeleteCard = (index) => {
+    const updatedTaskList = [...taskList]
+    updatedTaskList.splice(index,1)
+    setTaskList(updatedTaskList);
+  }
+
+ 
 
   return (
     <div className='card-wrapper backlog-color'>
@@ -46,12 +46,12 @@ const Backlog = () => {
         {showDropdown && (       
          <div className='cards' >
          {taskList.map((task, index) => {
-          return <Card key={index} text={task.cardText} priortiy={task.priority} />
+          return <Card key={index} text={task.cardText} priortiy={task.priority} onDelete={handleDeleteCard}/>
          })}
          
           <div className='card-wrapper__footer'>     
-            <AdButton setTaskList={setTaskList} taskList={taskList} />   
-          </div>
+            <AddForm setTaskList={setTaskList} taskList={taskList} />   
+          </div>         
           </div>        
         )}   
         </div> 

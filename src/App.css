@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px;
+  padding: 35px;
 }
 .kanban__nav-name{
   display: flex;
@@ -64,6 +64,9 @@
 .kanban__nav-avs {
   display: flex;
 }
+/* .kanban__nav-avs :hover{
+display: none;
+} */
 .kanban__nav-avs-img {
   width: 40px;
   height: 40px;
@@ -72,6 +75,9 @@
 }
 .kanban__nav-avs-img img {
   border-radius: 40px;
+}
+.kanban__nav-avs :hover .kanban__nav-avs-invite{
+  opacity: initial;
 }
 img {
   overflow-clip-margin: content-box;
@@ -121,8 +127,12 @@ img {
   cursor: pointer;
   color: var(--colorBar);
 }
+.kanban__nav-avs-add i{
+  padding-left: 8px;
+  padding-top: 8px;
+}
 .kanban__nav-avs-invite {
-  /* position: absolute;
+  position: absolute;
   right: -1px;
   top: -6px;
   height: 60px;
@@ -132,10 +142,29 @@ img {
   padding: 10px 0 10px 10px;
   background-color: var(--colorNav);
   border-radius: 5px;
-  z-index: 1;*/
+  z-index: 1;
   transition: 0.4s;
-  /* opacity: 0;  */
-} 
+  opacity: 0;
+}
+.invite-email {
+  border: none;
+  padding: 10px;
+  color: var(--colorName);
+  outline: none;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+}
+.invite-btn {
+  border: none;
+  color: var(--colorWhite);
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(45deg, #9ea7fc 0%, #65b6f7 100%);
+  transition: 0.4s;
+}
 .kanban__nav-avs-invite i {
   font-size: 25px;
   position:absolute;

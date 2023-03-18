@@ -1,0 +1,204 @@
+.card-wrapper__footer:hover {
+    color: var(--colorLogo);
+}
+.card-wrapper__footer {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 15px 0;
+    color: var(--colorBarW);
+}
+.add-card-form-true {
+    display: flex;
+}
+.add-card-form {
+    /* display: none; */
+    flex-direction: column;
+    padding: 0 0 10px 0;
+    width: 260px;
+}
+.add-card-form__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.form__low-pr {
+    font-size: 12px;
+    color: var(--colorWhite);
+    border-radius: 3px;
+    height: 20px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--colorBar);
+}
+.form__low-pr input[type="radio"]:checked + .form__label {
+    background: linear-gradient(90deg, #9ea7fc 17%, #6eb4f7 83%);
+}
+.form__checkbox {
+    opacity: 0;
+    width: 80px;
+    height: 20px;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+input[type="radio" i] {
+    background-color: initial;
+    /* cursor: default; */
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 0px 5px;
+    padding: initial;
+    border: initial;
+}
+input {
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+.form__label {
+    position: relative;
+    font-size: 12px;
+    color: var(--colorWhite);
+    border-radius: 3px;
+    height: 20px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--colorBar);
+}
+.form__med-pr {
+    font-size: 12px;
+    color: var(--colorWhite);
+    border-radius: 3px;
+    height: 20px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--colorBar);
+}
+.form__med-pr input[type="radio"]:checked + .form__label {
+    background: linear-gradient(138.6789deg, #81d5ee 17%, #7ed492 83%);
+}
+.form__high-pr {
+    font-size: 12px;
+    color: var(--colorWhite);
+    border-radius: 3px;
+    height: 20px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--colorBar);
+    cursor: pointer;
+}
+.form__high-pr input[type="radio"]:checked + .form__label {
+    background: linear-gradient(138.6789deg, #c781ff 17%, #e57373 83%);
+}
+.add-card-form__main-error {
+    outline-color: pink;
+}
+.add-card-form__main {
+    resize: none;
+    border: none;
+    padding: 10px;
+    color: var(--colorName);
+    outline-color: var(--colorWhite);
+    border-radius: 5px;
+    height: 40px;
+    margin: 10px 0 10px 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+}
+.add-card-form__footer {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    align-items: center;
+}
+.form__footer {
+    display: flex;
+}
+.form__footer-av {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+.form__footer-av img {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+}
+.form-add-btn:disabled {
+    border: none;
+    color: var(--colorWhite);
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    cursor: not-allowed;
+    background: var(--colorBar);
+}
+.form-add-btn:enabled {
+    border: none;
+    color: var(--colorWhite);
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background: var(--colorLogo);
+    transition: 0.4s;
+}
+textarea {
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    resize: auto;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    background-color: field;
+    column-count: initial !important;
+    margin: 0em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    padding: 2px;
+}
+textarea:focus-visible {
+    outline-offset: 0px;
+}
+:focus-visible {
+    outline: -webkit-focus-ring-color auto 1px;
+}

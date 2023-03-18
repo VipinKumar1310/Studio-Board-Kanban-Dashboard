@@ -1,10 +1,9 @@
-import {useState} from 'react'
-import React from 'react'
+import React, {useState} from 'react'
 import './style/Block.css'
 import Card from './Card'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
-import { AddCircleOutline } from '@mui/icons-material';
+import {AddCircleOutline} from '@mui/icons-material';
 
 const InProgress = () => {
 
@@ -17,7 +16,7 @@ const InProgress = () => {
   };
 
   return (
-    <div className='card-wrapper in-progress-color'>
+    <div className='card-wrapper in-progress-color' >
         <div className='card-wrapper__header'>
             <div className='block-name'>In Progess</div>
             <div className='block-dots' onClick={handleDropdownClick}>
@@ -35,10 +34,8 @@ const InProgress = () => {
                 <i className='material-icons'><AddCircleOutline/></i>
             </div>     
           </div>
-           </div>
-           
+           </div>        
          )}
-        
     </div>
   )
 }

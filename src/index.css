@@ -73,3 +73,7 @@ img {
   -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
 }
+form {
+  display: block;
+  margin-top: 0em;
+}

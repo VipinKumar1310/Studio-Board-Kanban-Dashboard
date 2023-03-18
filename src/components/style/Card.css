@@ -38,7 +38,10 @@
     margin: 10px 10px 0 0;
     cursor: pointer;
     font-size: 18px;
-    display:none;
+   opacity: 0;
+}
+.card :hover .card__header-clear{
+    opacity: initial;
 }
 .card__text{
     color: var(--colorName);
@@ -90,6 +93,9 @@
     position: absolute;
     top: 2px;
     left: 2px;
+}
+.add-peoples i :hover{
+color: var(--colorLogo);
 }
 .img-avatar {
     width: 30px;
