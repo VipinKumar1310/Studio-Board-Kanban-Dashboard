@@ -15,6 +15,7 @@ const InProgress = () => {
     setIcon(icon === 'down' ? 'right' : 'down')
   };
 
+  
   return (
     <div className='card-wrapper in-progress-color' >
         <div className='card-wrapper__header'>

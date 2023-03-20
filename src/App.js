@@ -12,9 +12,11 @@ import avatar1 from './resources/avatar1.jpg'
 import avatar2 from './resources/avatar2.jpg'
 import avatar3 from './resources/avatar3.jpg'
 import avatar4 from './resources/avatar4.jpg'
+import Board from './components/Board'
+import AddButton from './components/AddButton'
 
 
-const App = () => {
+const App = (props) => {
   const [isActive, setIsActive] = useState(true)
   const [icon, setIcon] = useState('down');
 
@@ -27,6 +29,30 @@ const App = () => {
   const handleMainClick = (e) => {
     e.stopPropagation();
   }
+
+  
+  const [boardList, setBoardList] = useState([
+    {
+      id: "101",
+      cardText: "Backlog",
+      style: "backlog-color",
+    },
+    {
+      id: "102",
+      cardText: "In Progress",
+      style: "in-progress-color",
+    },
+    {
+        id: "103",
+        cardText: "Complete",
+        style: "complete-color",
+      },
+      {
+        id: "104",
+        cardText: "Review",
+        style: "review-color",
+      },
+  ])
 
   return (
     <div className='app'>
@@ -46,7 +72,7 @@ const App = () => {
             <div className='kanban__nav-avs-add'>
               <div className='kanban__nav-avs-invite'>
                 <form>
-                  <input type='small' placeholder='invite email' className='invite-email'/>
+                  <input type='small' placeholder='invite email' className='invite-email' />
                     <button className='invite-btn'>Send</button>
                 </form>
               </div>
@@ -59,12 +85,11 @@ const App = () => {
         {isActive && (
           <section>
           <div className='kanban__main-wrapper' onClick={handleMainClick}>
-             <Backlog/>
-             <InProgress/>
-             <Review/>
-             <Complete/> 
+          {boardList.map((task, index) => {
+          return <Board key={index} data={task} />
+         })}
           </div>
-          <div className='kanban__main-add-btn'></div>
+          <AddButton/>
           </section>
         )}
           </div>

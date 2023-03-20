@@ -202,3 +202,7 @@ textarea:focus-visible {
 :focus-visible {
     outline: -webkit-focus-ring-color auto 1px;
 }
+textarea::placeholder {
+    font-style: italic;
+    color: #b7bec7;
+  }

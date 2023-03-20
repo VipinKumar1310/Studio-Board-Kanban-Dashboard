@@ -5,29 +5,35 @@ import MessageIcon from '@mui/icons-material/Message';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 import Add from '@mui/icons-material/Add';
 import Clear from '@mui/icons-material/Clear';
+import classNames from 'classnames';
+// import drag from './drag';
 
-const Card = ({onDelete}) => {
+const Card = (props) => {
     
-  
+    const style = classNames('card-container-color', props.data?.style);
+    // const []
+    const detectDrag = e => {
+        // alert(e.target.className)
+    }
     return (
-        <div className='card' draggable='true'>
+        <div className='card' draggable='true' onDragStart={detectDrag}>
             <div className='card__header'>
-          <div className='card-container-color card-color-low'>
-              <div className='card__header-priority'>Low Priority</div>
+          <div className={style}>
+              <div className='card__header-priority'>{props.data?.priority}</div>
               </div>
-              <div className='card__header-clear ' onClick={onDelete}>
+              <div className='card__header-clear ' id={props.data?.id} onClick={() => props.onDelete(props.data.id)}>
                   <i className='material-icons'><Clear fontSize='small'/></i>
               
           </div>
           </div>
-          <div className='card__text'>Hello, World</div>
+          <div className='card__text'>{props.data?.cardText}</div>
           <div className='card__menu'>
           <div className='card__menu-left'>
               <div className='comments-wrapper'>
                   <div className='comments-ico'>
                       <i className='material-icons'><MessageIcon fontSize='small'/></i>
                   </div>
-                  <div className='comments-num'>1</div>
+                  <div className='comments-num'>{props.data?.comments}</div>
               </div>
               <div className='attach-wrapper'>
                   <div className='attach-ico'>

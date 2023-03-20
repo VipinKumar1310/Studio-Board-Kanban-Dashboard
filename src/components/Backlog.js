@@ -18,22 +18,29 @@ const Backlog = () => {
 
   const [taskList, setTaskList] = useState([
     {
+      id: "ab",
       cardText: "anything",
-      priority: "Low Priority"
+      priority: "Low Priority",
+      style: "card-color-high",
+      comments: 10
     },
     {
+      id: "cd",
       cardText: "anything",
-      priority: "Low Priority"
+      priority: "Low Priority",
+      style: "card-color-low",
+      comments: 5
     },
   ])
 
-  const handleDeleteCard = (index) => {
+  const handleDeleteCard = (id) => {
     const updatedTaskList = [...taskList]
-    updatedTaskList.splice(index,1)
+    for(let i=0; i< updatedTaskList.length; i++){
+      let obj = updatedTaskList[i];
+      if(obj.id === id) updatedTaskList.splice(i, 1)
+    }
     setTaskList(updatedTaskList);
   }
-
- 
 
   return (
     <div className='card-wrapper backlog-color'>
@@ -46,7 +53,7 @@ const Backlog = () => {
         {showDropdown && (       
          <div className='cards' >
          {taskList.map((task, index) => {
-          return <Card key={index} text={task.cardText} priortiy={task.priority} onDelete={handleDeleteCard}/>
+          return <Card key={index} data={task} onDelete={handleDeleteCard}/>
          })}
          
           <div className='card-wrapper__footer'>     

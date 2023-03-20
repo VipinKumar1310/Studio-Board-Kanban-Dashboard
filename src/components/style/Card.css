@@ -28,6 +28,12 @@
 .card-color-low {
     background: linear-gradient(90deg, #9ea7fc 17%, #6eb4f7 83%);
 }
+.card-color-high {
+    background: linear-gradient(138.6789deg, #c781ff 17%, #e57373 83%);
+}
+.card-color-mid{
+    background: linear-gradient(138.6789deg, #81d5ee 17%, #7ed492 83%);
+}
 .card__header-priority{
     color: var(--colorWhite);
     font-size: 12px;
@@ -38,10 +44,14 @@
     margin: 10px 10px 0 0;
     cursor: pointer;
     font-size: 18px;
-   opacity: 0;
+    display: none;
 }
+.card__header-clear:hover{
+    color: var(--colorLogo)
+}
+
 .card :hover .card__header-clear{
-    opacity: initial;
+    display: flex;
 }
 .card__text{
     color: var(--colorName);
