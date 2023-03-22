@@ -5,6 +5,11 @@ import user from '../resources/avatar2.jpg';
 import { AddCircleOutline } from '@mui/icons-material';
 import RemoveCircleOutline from '@mui/icons-material/RemoveCircleOutline';
 
+
+const newId = () => {
+  return Math.round(Math.random() * 36 ** 8).toString(36)
+}
+
 const AddForm = (props) => {
   const [isAdding, setIsAdding] = useState(false);
   const [cardText, setCardText] = useState('');
@@ -14,7 +19,7 @@ const AddForm = (props) => {
 
   const handleAdd = e => {
     e.preventDefault();
-    props.setTaskList([...props.taskList, { cardText: cardText, priority: priority, style: style, boardId: props.boardId }]);
+    props.setTaskList([...props.taskList, { id:newId(), cardText: cardText, priority: priority, style: style, boardId: props.boardId }]);
     setIsAdding(false);
     setIcon('add');
     setPriority('');

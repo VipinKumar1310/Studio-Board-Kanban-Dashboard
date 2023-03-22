@@ -1,31 +1,22 @@
 import {useState} from 'react'
 import React from 'react'
-import './App.css'
+import './style/KanbanBoard.css'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
 import Add from '@mui/icons-material/Add';
-import avatar1 from './resources/avatar1.jpg'
-import avatar2 from './resources/avatar2.jpg'
-import avatar3 from './resources/avatar3.jpg'
-import avatar4 from './resources/avatar4.jpg'
-import Board from './components/Board'
-import AddButton from './components/AddButton'
+import avatar1 from '../resources/avatar1.jpg'
+import avatar2 from '../resources/avatar2.jpg'
+import avatar3 from '../resources/avatar3.jpg'
+import avatar4 from '../resources/avatar4.jpg'
+import Board from '../components/Board'
+import AddButton from '../components/AddButton'
 
 
-const App = (props) => {
+const App = () => {
   const [isActive, setIsActive] = useState(true)
   const [icon, setIcon] = useState('down');
-
-  const handleArrowClick = (e) => {
-    e.stopPropagation();
-    setIsActive(!isActive)
-    setIcon(icon === 'down' ? 'right' : 'down')
-  }
-
-  const handleMainClick = (e) => {
-    e.stopPropagation();
-  }
-
+  const [opacity, setOpacity] = useState(1);
+  
   const [taskList, setTaskList] = useState([
     {
       id: "ab",
@@ -124,8 +115,8 @@ const App = (props) => {
         comments: 10
       }
   ])
-  
-  const boardList= [
+
+  const boardList = [
     {
       id: "101",
       cardText: "Backlog",
@@ -146,8 +137,24 @@ const App = (props) => {
         cardText: "Review",
         style: "review-color",
       },
-      
   ]
+
+  const handleArrowClick = (e) => {
+    e.stopPropagation();
+    setIsActive(!isActive)
+    setIcon(icon === 'down' ? 'right' : 'down')
+  }
+
+  const handleMainClick = (e) => {
+    e.stopPropagation();
+  }
+
+  const handleOpacityChange = (e) => {
+    const newOpacity = opacity === 1 ? 0.3 : 1;
+    setOpacity(newOpacity);
+  };
+  
+
   const onDragOver = e => {
     e.preventDefault();
   };
@@ -165,12 +172,13 @@ const App = (props) => {
     setTaskList(updatedTaskList )
   }
 
+
   return (
-    <div className='app'>
-      <div className='kanban__nav'>
+    <div className='app '>
+      {/* <div className='kanban__nav'>
        <div className='kanban__nav-wrapper'>
         <div className='kanban__nav-name' >
-          <div className='kanban-name'>StudioBoard</div>
+          <div className='kanban-name'>Studio Board</div>
            <div className='kanban-arrow' onClick={handleArrowClick}>
         <i className='material-icons'>{icon === 'down' ? <KeyboardArrowDownIcon/> : <KeyboardArrowRightIcon/>}</i>
            </div>
@@ -191,16 +199,16 @@ const App = (props) => {
             </div>
           </div>
          </div>       
-        </div>
-        <div className='kanban__main'>
+        </div> */}
+        <div className='kanban__main' style={{ opacity }}>
         {isActive && (
           <section>
           <div className='kanban__main-wrapper' onClick={handleMainClick}>
           {boardList.map((task, index) => {
-          return <Board key={index} data={task} taskList={taskList} setTaskList={setTaskList} onDragOver={onDragOver} onDrop={onDrop}/>
+          return <Board key={index} data={task}  taskList={taskList} setTaskList={setTaskList} onDragOver={onDragOver} onDrop={onDrop}/>
          })}
           </div>
-          <AddButton/>
+          <AddButton onChangeOpacity={handleOpacityChange}/>
           </section>
         )}
           </div>
