@@ -2,6 +2,7 @@
   background-color: var(--colorNav);
     grid-area: main;
     position: relative;
+    
 }
 .kanban__main-wrapper {
   display: flex;
@@ -79,45 +80,14 @@ display: none;
 .kanban__nav-avs :hover .kanban__nav-avs-invite{
   opacity: initial;
 }
+.kanban__nav-avs :hover .invite-btn :hover{
+  box-shadow: 0 12px 16px 0 rgba(114, 140, 255, 0.24),0 17px 50px 0 rgba(121, 119, 255, 0.19);
+}
 img {
   overflow-clip-margin: content-box;
   overflow: clip;
 }
-@media screen and (max-width: 540px){
-  .kanban__nav-wrapper {
-      margin: 0px;
-  }
-  }
-@media screen and (max-width: 540px) {
-    .kanban__nav-name {
-      margin: 0 auto;
-    }
-@media screen and (max-width: 720px) {
-  .kanban__nav-avs {
-    display: none;
-  }
-}
-.kanban__nav-wrapper {
-    margin: 0;
-  }
 
-  .avatar-user {
-    margin-right: 0;
-  }
-}
-
-@media screen and (max-width: 820px) {
-  .kanban__main-wrapper {
-    justify-content: space-around;
-    margin: 0px;
-  }
-}
-
-@media screen and (max-width: 1380px) {
-  .kanban__main-add-btn {
-    display: none;
-  }
-}
 .kanban__nav-avs-add {
   border: 1.5px dashed var(--colorBar);
   border-radius: 50px;
@@ -145,7 +115,9 @@ img {
   z-index: 1;
   transition: 0.4s;
   opacity: 0;
+  
 }
+
 .invite-email {
   border: none;
   padding: 10px;
@@ -165,7 +137,6 @@ img {
   background: linear-gradient(45deg, #9ea7fc 0%, #65b6f7 100%);
   transition: 0.4s;
 }
-
 .kanban__nav-avs-invite i {
   font-size: 25px;
   position:absolute;
@@ -175,4 +146,39 @@ img {
 input::placeholder {
   font-style: italic;
   color: #b7bec7;
+}
+
+@media screen and (max-width: 540px){
+  .kanban__nav-wrapper {
+      margin: 0px;
+  }
+  }
+@media screen and (max-width: 540px) {
+    .kanban__nav-name {
+      margin: 0 auto;
+    }
+      .kanban__nav-wrapper {
+        margin: 0;
+      }
+    
+      .avatar-user {
+        margin-right: 0;
+      }
+    }
+    
+@media screen and (max-width: 720px) {
+  .kanban__nav-avs {
+    display: none;
+  }
+}
+@media screen and (max-width: 820px) {
+  .kanban__main-wrapper {
+    justify-content: space-around;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 1380px) {
+  .kanban__main-add-btn {
+    display: none;
+  }
 }

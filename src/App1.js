@@ -12,11 +12,20 @@ import Board from './components/Board'
 import AddButton from './components/AddButton'
 
 
-const App = () => {
+const App = (props) => {
   const [isActive, setIsActive] = useState(true)
   const [icon, setIcon] = useState('down');
-  const [opacity, setOpacity] = useState(1);
-  
+
+  const handleArrowClick = (e) => {
+    e.stopPropagation();
+    setIsActive(!isActive)
+    setIcon(icon === 'down' ? 'right' : 'down')
+  }
+
+  const handleMainClick = (e) => {
+    e.stopPropagation();
+  }
+
   const [taskList, setTaskList] = useState([
     {
       id: "ab",
@@ -115,8 +124,8 @@ const App = () => {
         comments: 10
       }
   ])
-
-  const boardList = [
+  
+  const boardList= [
     {
       id: "101",
       cardText: "Backlog",
@@ -137,24 +146,8 @@ const App = () => {
         cardText: "Review",
         style: "review-color",
       },
+      
   ]
-
-  const handleArrowClick = (e) => {
-    e.stopPropagation();
-    setIsActive(!isActive)
-    setIcon(icon === 'down' ? 'right' : 'down')
-  }
-
-  const handleMainClick = (e) => {
-    e.stopPropagation();
-  }
-
-  const handleOpacityChange = (e) => {
-    const newOpacity = opacity === 1 ? 0.3 : 1;
-    setOpacity(newOpacity);
-  };
-  
-
   const onDragOver = e => {
     e.preventDefault();
   };
@@ -172,13 +165,12 @@ const App = () => {
     setTaskList(updatedTaskList )
   }
 
-
   return (
     <div className='app'>
       <div className='kanban__nav'>
        <div className='kanban__nav-wrapper'>
         <div className='kanban__nav-name' >
-          <div className='kanban-name'>Studio Board</div>
+          <div className='kanban-name'>StudioBoard</div>
            <div className='kanban-arrow' onClick={handleArrowClick}>
         <i className='material-icons'>{icon === 'down' ? <KeyboardArrowDownIcon/> : <KeyboardArrowRightIcon/>}</i>
            </div>
@@ -200,15 +192,15 @@ const App = () => {
           </div>
          </div>       
         </div>
-        <div className='kanban__main' style={{ opacity }}>
+        <div className='kanban__main'>
         {isActive && (
           <section>
           <div className='kanban__main-wrapper' onClick={handleMainClick}>
           {boardList.map((task, index) => {
-          return <Board key={index} data={task}  taskList={taskList} setTaskList={setTaskList} onDragOver={onDragOver} onDrop={onDrop}/>
+          return <Board key={index} data={task} taskList={taskList} setTaskList={setTaskList} onDragOver={onDragOver} onDrop={onDrop}/>
          })}
           </div>
-          <AddButton onChangeOpacity={handleOpacityChange}/>
+          <AddButton/>
           </section>
         )}
           </div>

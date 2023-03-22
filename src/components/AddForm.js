@@ -14,7 +14,7 @@ const AddForm = (props) => {
 
   const handleAdd = e => {
     e.preventDefault();
-    props.setTaskList([...props.taskList, { cardText: cardText, priority: priority, style: style }]);
+    props.setTaskList([...props.taskList, { cardText: cardText, priority: priority, style: style, boardId: props.boardId }]);
     setIsAdding(false);
     setIcon('add');
     setPriority('');
@@ -82,7 +82,7 @@ const AddForm = (props) => {
                   type='radio'
                   name='priority'
                   alt='Med Priority'
-                  value='card-color-med'
+                  value='card-color-mid'
                 />
                 <label className='form__label' for='Med Priority'>
                   Med Priority

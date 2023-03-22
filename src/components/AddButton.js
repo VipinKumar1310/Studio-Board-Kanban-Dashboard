@@ -3,7 +3,7 @@ import './style/AddButton.css';
 import Add from '@mui/icons-material/Add';
 import Done from '@mui/icons-material/Done';
 
-const AddButton = () => {
+const AddButton = (props) => {
   const [isActive, setIsActive] = useState(false);
   const [icon, setIcon] = useState('add');
 
@@ -11,17 +11,21 @@ const AddButton = () => {
     e.stopPropagation();
     setIsActive(!isActive);
     setIcon(icon === 'add' ? 'done' : 'add');
+     props.onChangeOpacity();
   };
 
   const handleMainClick = (e) => {
     e.stopPropagation();
+    
   };
 
+
+
   return (
-    <div>
-      <div className='kanban__main-add-btn' onClick={handleArrowClick}>
+    <div className='kanban-add-btn'>
+      <div className='kanban__main-add-btn' onClick={handleArrowClick} >
         <i className='material-icons'>{icon === 'add' ? <Add/> : <Done/>}</i>
-      </div>
+        </div>
       {isActive && (
         <section>
           <div className='kanban__main-select' onClick={handleMainClick}>
@@ -40,6 +44,7 @@ const AddButton = () => {
               </div>
             </div>
           </div>
+         
         </section>
       )}
     </div>

@@ -1,3 +1,6 @@
+.kanban-add-btn{
+  
+}
 .kanban__main-add-btn {
     border-radius: 80px;
     width: 50px;
@@ -28,8 +31,8 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: 78%;
-    left: 83.6%;
+    top: 74%;
+    left: 84.1%;
     width: 180px;
   }
   .select-wrapper-main {
@@ -92,4 +95,11 @@
     font-size: 18px;
   }
  
-  
+  @media screen and (max-width: 1380px) {
+    .kanban__main-add-btn {
+      display: none;
+    }
+    .kanban__main-select{
+      display: none;
+    }
+  }
