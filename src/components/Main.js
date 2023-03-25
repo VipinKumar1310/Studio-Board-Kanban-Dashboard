@@ -151,7 +151,7 @@ const App = () => {
 
   const handleOpacityChange = (e) => {
     const newOpacity = opacity === 1 ? 0.3 : 1;
-    setOpacity(newOpacity);
+    // setOpacity(newOpacity);
   };
 
   const onDragOver = (e) => {
@@ -189,16 +189,16 @@ const App = () => {
           </div>
           <div className="kanban__nav-avs">
             <div className="kanban__nav-avs-img">
-              <img src={avatar1} />
+              <img src={avatar1} alt="" />
             </div>
             <div className="kanban__nav-avs-img">
-              <img src={avatar2} />
+              <img src={avatar2} alt="" />
             </div>
             <div className="kanban__nav-avs-img">
-              <img src={avatar3} />
+              <img src={avatar3} alt="" />
             </div>
             <div className="kanban__nav-avs-img">
-              <img src={avatar4} />
+              <img src={avatar4} alt="" />
             </div>
             <div className="kanban__nav-avs-add">
               <div className="kanban__nav-avs-invite">

@@ -9,6 +9,7 @@
   background: linear-gradient(45deg, #9ea7fc 0%, #65b6f7 100%);
   box-shadow: 0px 0px 20px 0px #9ea7fc;
   transition: 0.4s;
+  z-index: 1;
 }
 .kanban__main-add-btn :hover {
   box-shadow: 0px 0px 40px 0px #9ea7fc;
@@ -23,6 +24,12 @@
 }
 .kanban__main-select {
   display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #ffffff70;
 }
 .main-select {
   position: absolute;

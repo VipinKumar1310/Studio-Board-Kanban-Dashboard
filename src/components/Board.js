@@ -4,7 +4,6 @@ import Card from "./Card";
 import AddForm from "./AddForm";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import ClassNames from "classnames";
 
 const Board = (props) => {
   const [showDropdown, setShowDropdown] = useState(true);
@@ -29,13 +28,14 @@ const Board = (props) => {
     props.setTaskList(updatedTaskList);
   };
 
-  const style = ClassNames(props.data?.Style);
-  const classes = ClassNames({
-    "card-wrapper": true,
-  });
   return (
     <div
-      className={style + "" + classes}
+      className="card-wrapper"
+      style={{
+        borderTop: `solid 4px #${Math.floor(Math.random() * 16777215).toString(
+          16
+        )}`,
+      }}
       onDragOver={(e) => props.onDragOver(e)}
       onDrop={(e) => props.onDrop(e, props.data?.id)}
     >

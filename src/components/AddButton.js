@@ -3,7 +3,7 @@ import "./style/AddButton.css";
 import Add from "@mui/icons-material/Add";
 import Done from "@mui/icons-material/Done";
 
-const AddButton = (props) => {
+const AddButton = ({ onChangeOpacity }) => {
   const [isActive, setIsActive] = useState(false);
   const [icon, setIcon] = useState("add");
 
@@ -11,7 +11,7 @@ const AddButton = (props) => {
     e.stopPropagation();
     setIsActive(!isActive);
     setIcon(icon === "add" ? "done" : "add");
-    props.onChangeOpacity();
+    onChangeOpacity();
   };
 
   const handleMainClick = (e) => {
