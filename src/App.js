@@ -21,14 +21,16 @@ const App = () => {
   return (
     <div className='kanban-wrapper'>
     <div className='kanban' >
-      <Routes>
-        <Route exact path='/' Component={Main}/>
-        <Route path='/manage' Component={Manage}/>
-        <Route path='/schedule' Component={Schedule}/>
-        <Route path='/reports' Component={Reports}/>
-        <Route path='/settings' Component={Settings}/>
-      </Routes>
-    <SideBar handleOnClick={handleOnClick} />
+      <div className='app'>
+        <Routes>
+          <Route exact path='/' Component={Main}/>
+          <Route path='/manage' Component={Manage}/>
+          <Route path='/schedule' Component={Schedule}/>
+          <Route path='/reports' Component={Reports}/>
+          <Route path='/settings' Component={Settings}/>
+        </Routes>
+        <SideBar handleOnClick={handleOnClick} />
+      </div>
     </div>
     </div>
   )

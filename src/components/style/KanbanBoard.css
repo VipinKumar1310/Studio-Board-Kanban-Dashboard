@@ -23,7 +23,10 @@
     grid-area: main;
     position: relative;
     background-color: var(--colorNav);
-    padding-left: 30px;
+    padding-left: 90px;
+    min-height: 700px;
+    height: 100%;
+    flex: 1;
   }
   .kanban__nav {
     background-color: var(--colorNav);

@@ -1,10 +1,10 @@
 
 .kanban {
-  display: grid;
-  grid-template:
-      "logo header" var(--logoHeader)
-      "sidebar nav" var(--sidebarNav)
-      "sidebar main" auto / minmax(auto, 120px) minmax(290px, 1320px);
+  display: flex;
+  justify-content: center;
+  margin: 80px auto 10px;
+  max-width: 1440px;
+  width: 100%;
 }
 @media screen and (max-width: 1024px){
 .kanban-wrapper {

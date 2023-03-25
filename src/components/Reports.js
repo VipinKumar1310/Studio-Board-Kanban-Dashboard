@@ -7,7 +7,7 @@ const Reports = () => {
     
 
   return (
-    <div className='app'>
+    <>
     <div className='kanban__nav'>
        <div className='kanban__nav-wrapper'>
         <div className='kanban__nav-name' >
@@ -19,7 +19,7 @@ const Reports = () => {
            <div className='kanban__main-wrapper' >       
            </div>
      </div>
-     </div>
+     </>
      ) 
 }
 

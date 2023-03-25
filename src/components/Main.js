@@ -175,7 +175,7 @@ const App = () => {
 
  
   return (
-    <div className='app'>
+    <>
       <div className='kanban__nav'>
        <div className='kanban__nav-wrapper'>
         <div className='kanban__nav-name' >
@@ -217,7 +217,7 @@ const App = () => {
           </section>
         )}
           </div>
-    </div>
+    </>
   )
 }
 
