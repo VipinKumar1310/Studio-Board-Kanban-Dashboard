@@ -15,6 +15,9 @@
 a {
     text-decoration: none;
 }
+link{
+    text-decoration: none;
+}
 .manage-area {
     height: 100px;
     display: flex;

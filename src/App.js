@@ -2,34 +2,33 @@ import React, { useState } from 'react'
 import SideBar from './components/SideBar'
 import KanbanBoard from './components/KanbanBoard'
 import './App.css'
-import NavBar from './components/NavBar'
+import Manage from './components/Manage'
+import { Route, Routes } from 'react-router-dom'
+import Main from './components/Main'
+import Schedule from './components/Schedule'
+import Reports from './components/Reports'
+import Settings from './components/Settings'
+
 
 const App = () => {
-  const [showNavbar, setShowNavbar] = useState(true);
-  const [showKanbanBoard, setShowKanbanBoard] = useState(true);
-
+  const [showNavbar, setShowNavbar] = useState(false);
+ 
   const handleOnClick = () => {
-    setShowNavbar(!showNavbar);
+    setShowNavbar(!showNavbar); 
   }
 
-  const handleShowOnClick = () => {
-    setShowKanbanBoard(!showKanbanBoard);
-  }
+
   return (
     <div className='kanban-wrapper'>
     <div className='kanban' >
+      <Routes>
+        <Route exact path='/' Component={Main}/>
+        <Route path='/manage' Component={Manage}/>
+        <Route path='/schedule' Component={Schedule}/>
+        <Route path='/reports' Component={Reports}/>
+        <Route path='/settings' Component={Settings}/>
+      </Routes>
     <SideBar handleOnClick={handleOnClick} />
-      {showNavbar && (
-        <>
-          <NavBar handleShowOnClick={handleShowOnClick} />
-          <>
-          {showKanbanBoard && (
-            <KanbanBoard/>
-          )}
-          </>
-          
-        </>
-      )}
     </div>
     </div>
   )
