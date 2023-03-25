@@ -1,4 +1,3 @@
-
 .kanban {
   display: flex;
   justify-content: center;
@@ -6,7 +5,8 @@
   max-width: 1440px;
   width: 100%;
 }
-@media screen and (max-width: 1024px){
-.kanban-wrapper {
+@media screen and (max-width: 1024px) {
+  .kanban-wrapper {
     padding: 0;
-}}
+  }
+}

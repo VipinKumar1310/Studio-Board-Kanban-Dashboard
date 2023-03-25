@@ -1,120 +1,125 @@
-.card{
-    border-radius: 5px;
-    border: 1px dashed var(--colorWhite);
-    background-color: var(--colorWhite);
-    width: 260px;
-    height: auto;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: url(
-        https://ssl.gstatic.com/ui/v1/icons/mail/images/2/openhand.cur), 
-        default !important;
+.card {
+  border-radius: 5px;
+  border: 1px dashed var(--colorWhite);
+  background-color: var(--colorWhite);
+  width: 260px;
+  height: auto;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: url(https://ssl.gstatic.com/ui/v1/icons/mail/images/2/openhand.cur),
+    default !important;
 }
-.card__header{
-    display: flex;
-    justify-content: space-between;
+.card__header {
+  display: flex;
+  justify-content: space-between;
 }
-.card-container-color{
-    border-radius: 3px;
-    height: 20px;
-    width: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0 15px 10px;
+.card-container-color {
+  border-radius: 3px;
+  height: 20px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 15px 10px;
 }
 .card-color-low {
-    background: linear-gradient(90deg, #9ea7fc 17%, #6eb4f7 83%);
+  background: linear-gradient(90deg, #9ea7fc 17%, #6eb4f7 83%);
 }
 .card-color-high {
-    background: linear-gradient(138.6789deg, #c781ff 17%, #e57373 83%);
+  background: linear-gradient(138.6789deg, #c781ff 17%, #e57373 83%);
 }
-.card-color-mid{
-    background: linear-gradient(138.6789deg, #81d5ee 17%, #7ed492 83%);
+.card-color-mid {
+  background: linear-gradient(138.6789deg, #81d5ee 17%, #7ed492 83%);
 }
-.card__header-priority{
-    color: var(--colorWhite);
-    font-size: 12px;
-    font-weight: 400;
+.card__header-priority {
+  color: var(--colorWhite);
+  font-size: 12px;
+  font-weight: 400;
 }
-.card__header-clear{
-    color: var(--colorBarW);
-    margin: 10px 10px 0 0;
-    cursor: pointer;
-    font-size: 18px;
-    display: none;
+.card__header-clear {
+  color: var(--colorBarW);
+  margin: 10px 10px 0 0;
+  cursor: pointer;
+  font-size: 18px;
+  display: none;
 }
-.card__header-clear:hover{
-    color: var(--colorLogo)
+.card__header-clear:hover {
+  color: var(--colorLogo);
 }
 
-.card :hover .card__header-clear{
-    display: flex;
+.card :hover .card__header-clear {
+  display: flex;
 }
-.card__text{
-    color: var(--colorName);
-    font-size: 16px;
-    font-weight: 400;
-    margin: 0 10px;
-    word-wrap: break-word;
+.card__text {
+  color: var(--colorName);
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 10px;
+  word-wrap: break-word;
 }
 .card__menu {
-    display: flex;
-    justify-content: space-between;
-    margin: 15px 0 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0 10px 10px;
 }
 .card__menu-left {
-    width: 65px;
-    display: flex;
-    justify-content: space-between;
+  width: 65px;
+  display: flex;
+  justify-content: space-between;
 }
-.comments-wrapper, .attach-wrapper {
-    display: flex;
+.comments-wrapper,
+.attach-wrapper {
+  display: flex;
 }
-.comments-ico, .attach-ico{
-    font-size: 13px;
+.comments-ico,
+.attach-ico {
+  font-size: 13px;
 }
-.comments-ico, .comments-num, .attach-ico, .attach-num {
-    color: var(--colorBarW);
-    display: flex;
-    align-items: center;
+.comments-ico,
+.comments-num,
+.attach-ico,
+.attach-num {
+  color: var(--colorBarW);
+  display: flex;
+  align-items: center;
 }
-.comments-num, .attach-num {
-    font-size: 14px;
-    margin-left: 5px;
+.comments-num,
+.attach-num {
+  font-size: 14px;
+  margin-left: 5px;
 }
 .card__menu-right {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .add-peoples {
-    color: var(--colorBarW);
-    width: 28px;
-    height: 28px;
-    border: 1px dashed var(--colorBarW);
-    border-radius: 50px;
-    position: relative;
-    font-size: 20px;
-    cursor: pointer;
+  color: var(--colorBarW);
+  width: 28px;
+  height: 28px;
+  border: 1px dashed var(--colorBarW);
+  border-radius: 50px;
+  position: relative;
+  font-size: 20px;
+  cursor: pointer;
 }
 .add-peoples i {
-    position: absolute;
-    top: 2px;
-    left: 2px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
 }
-.add-peoples i :hover{
-color: var(--colorLogo);
+.add-peoples i :hover {
+  color: var(--colorLogo);
 }
 .img-avatar {
-    width: 30px;
-    margin: 30px;
-    margin: 0 10px 0 5px;
-    padding-top: 3px;
+  width: 30px;
+  margin: 30px;
+  margin: 0 10px 0 5px;
+  padding-top: 3px;
 }
-.img-avatar img{
-    width: 30px;
-    height: 30px;
-    border-radius: 30px;
+.img-avatar img {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
 }

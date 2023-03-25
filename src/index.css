@@ -7,7 +7,7 @@ body {
   padding: 0;
   margin: 0;
 }
-i{
+i {
   font-style: italic;
 }
 img {
@@ -40,8 +40,8 @@ img {
   font-family: "Material Icons";
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialicons/v38/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) 
-     format("woff2");
+  src: url(https://fonts.gstatic.com/s/materialicons/v38/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)
+    format("woff2");
 }
 /* .material-icons {
   font-family: "Material Icons";
@@ -56,7 +56,7 @@ img {
   -webkit-font-smoothing: antialiased;
   color: #d8d8e4;
   /* font-size: 32px; */
-  /* left: -1.5px;
+/* left: -1.5px;
   top: -1px; 
 } */
 .material-icons {
