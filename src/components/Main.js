@@ -12,6 +12,7 @@ import Board from "../components/Board";
 import AddButton from "../components/AddButton";
 import { Draggable } from "react-drag-reorder";
 
+
 const App = () => {
   const [isActive, setIsActive] = useState(true);
   const [icon, setIcon] = useState("down");
@@ -21,23 +22,23 @@ const App = () => {
     {
       id: "ab",
       boardId: "101",
-      cardText: "anything",
-      priority: "High Priority",
-      style: "card-color-high",
+      cardText: "Company Website Redesign",
+      priority: "Low Priority",
+      style: "card-color-low",
       comments: 10,
     },
     {
       id: "cd",
       boardId: "101",
-      cardText: "anything",
-      priority: "High Priority",
-      style: "card-color-high",
+      cardText: "Mobile App Login process",
+      priority: "Med Priority",
+      style: "card-color-mid",
       comments: 10,
     },
     {
       id: "ef",
       boardId: "101",
-      cardText: "anything",
+      cardText: "Onboarding Design",
       priority: "High Priority",
       style: "card-color-high",
       comments: 10,
@@ -45,23 +46,23 @@ const App = () => {
     {
       id: "gh",
       boardId: "102",
-      cardText: "anything",
-      priority: "Low Priority",
-      style: "card-color-low",
+      cardText: "Research and Strategy for upcoming projects",
+      priority: "High Priority",
+      style: "card-color-high",
       comments: 5,
     },
     {
       id: "ij",
       boardId: "102",
-      cardText: "anything",
-      priority: "Low Priority",
-      style: "card-color-low",
+      cardText: "Account file profile diagram",
+      priority: "Med Priority",
+      style: "card-color-mid",
       comments: 5,
     },
     {
       id: "kl",
       boardId: "102",
-      cardText: "anything",
+      cardText: "Slide templates for client pitch project",
       priority: "Low Priority",
       style: "card-color-low",
       comments: 5,
@@ -69,49 +70,49 @@ const App = () => {
     {
       id: "mn",
       boardId: "103",
-      cardText: "anything",
-      priority: "mid Priority",
-      style: "card-color-mid",
+      cardText: "Dashboard layout design",
+      priority: "Low Priority",
+      style: "card-color-low",
       comments: 10,
     },
     {
       id: "op",
       boardId: "103",
-      cardText: "anything",
-      priority: "mid Priority",
-      style: "card-color-mid",
+      cardText: "Social Media Post",
+      priority: "High Priority",
+      style: "card-color-high",
       comments: 10,
     },
     {
       id: "qr",
       boardId: "103",
-      cardText: "anything",
-      priority: "mid Priority",
-      style: "card-color-mid",
+      cardText: "Shopping Cart and product catalog wireframes",
+      priority: "Low Priority",
+      style: "card-color-low",
       comments: 10,
     },
     {
       id: "st",
       boardId: "104",
-      cardText: "anything",
-      priority: "mid Priority",
-      style: "card-color-mid",
+      cardText: "Review clientspec and document and give feedback",
+      priority: "Low Priority",
+      style: "card-color-low",
       comments: 10,
     },
     {
       id: "uv",
       boardId: "104",
-      cardText: "anything",
-      priority: "mid Priority",
+      cardText: "Navigation designs",
+      priority: "Med Priority",
       style: "card-color-mid",
       comments: 10,
     },
     {
       id: "wx",
       boardId: "104",
-      cardText: "anything",
-      priority: "mid Priority",
-      style: "card-color-mid",
+      cardText: "user profile prototypes",
+      priority: "Low Priority",
+      style: "card-color-low",
       comments: 10,
     },
   ]);
@@ -222,7 +223,7 @@ const App = () => {
         {isActive && (
           <section>
             <div className="kanban__main-wrapper" onClick={handleMainClick}>
-              {/* <Draggable > */}
+             
               {boardList.map((task, index) => {
                 return (
                   <Board
@@ -235,7 +236,7 @@ const App = () => {
                   />
                 );
               })}
-              {/* </Draggable > */}
+            
             </div>
             <AddButton onChangeOpacity={handleOpacityChange} />
           </section>
