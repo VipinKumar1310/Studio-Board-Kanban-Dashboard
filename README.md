@@ -1,4 +1,22 @@
+**1. Main Board**
+
 <img src="/screenshots/KanbanBoard.png?raw=true" style="margin: 5px">
+
+**2. Collapsable Main Board**
+
+<img src="/screenshots/CollapsableMainBoard.png?raw=true" style="margin: 5px">
+
+**3. Collapsable individual board**
+
+<img src="/screenshots/CollapsableBoard.png?raw=true" style="margin: 5px">
+
+**4. Add new task**
+
+<img src="/screenshots/AddNewTask.png?raw=true" style="margin: 5px">
+
+**5. Added new task**
+
+<img src="/screenshots/AddedNewTask.png?raw=true" style="margin: 5px">
 
 # Getting Started with Create React App
 
